@@ -8,10 +8,12 @@ RUN npm install
 
 RUN npm run build
 
-COPY ./src/assets /usr/local/app/assets
+
 
 FROM nginx:latest
 
-COPY --from=build /usr/local/app/dist/artFinal /usr/share/nginx/html
+COPY ./dist/artFinal /usr/share/nginx/html
+
+COPY ./dist/artFinal/assets /usr/share/nginx/html/assets
 
 EXPOSE 80
