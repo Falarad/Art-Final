@@ -16,7 +16,7 @@ WORKDIR /usr/share/nginx/html
 
 RUN rm -rf ./*
 
-COPY --from=builder /app/dist/angular-nginx-docker .
+COPY --from=build /app/dist/angular-nginx-docker .
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
