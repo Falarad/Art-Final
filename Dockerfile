@@ -8,6 +8,7 @@ RUN npm install
 
 RUN npm run build
 
+COPY /usr/local/app/dist/artFinal/assets /usr/local/app/artFinal/assets
 
 FROM nginx:latest
 
