@@ -1,6 +1,6 @@
 FROM node:12.14 as build
 
-WORKDIR /usr/local/app/Art-Final
+#WORKDIR /usr/local/app/Art-Final
 
 COPY ./ /usr/local/app/
 
