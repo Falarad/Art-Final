@@ -7,6 +7,7 @@ import { MediaComponent } from './media/media.component';
 import { ManifestoComponent } from './manifesto/manifesto.component';
 import { NotesComponent } from './notes/notes.component';
 import { ReferencesComponent } from './references/references.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ReferencesComponent } from './references/references.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
