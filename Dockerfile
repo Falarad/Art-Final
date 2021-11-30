@@ -12,7 +12,7 @@ RUN npm run build
 
 FROM nginx:latest
 
-COPY /usr/local/app/Art-Final/dist/artFinal /usr/share/nginx/html
+ADD /usr/local/app/Art-Final/dist/artFinal /usr/share/nginx/html
 
 VOLUME /usr/local/app/dist/artFinal/assets /usr/share/nginx/html/assets
 
