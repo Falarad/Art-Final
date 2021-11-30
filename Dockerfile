@@ -14,6 +14,6 @@ FROM nginx:latest
 
 COPY --from=build /usr/local/app/dist/artFinal/ /usr/share/nginx/html
 
-COPY  ./src/assets/ /usr/share/nginx/html/assets
+COPY  ./src/assets/ /usr/share/nginx/html/assets/
 
 EXPOSE 80
