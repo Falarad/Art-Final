@@ -1,8 +1,8 @@
 FROM node:12.14 as build
 
-#WORKDIR /usr/local/app/Art-Final
+WORKDIR /usr/local/app/Art-Final
 
-COPY . /usr/local/app/
+COPY ./ /usr/local/app/
 
 RUN npm install
 
@@ -14,6 +14,6 @@ FROM nginx:latest
 
 COPY --from=build /usr/local/app/dist/artFinal/ /usr/share/nginx/html
 
-#COPY --from=build /usr/local/app/dist/artFinal/assets /usr/share/nginx/html/assets
+VOLUME /usr/local/app/dist/artFinal/assets /usr/share/nginx/html/assets
 
 EXPOSE 80
