@@ -12,8 +12,8 @@ RUN npm run build
 
 FROM nginx:latest
 
-COPY ./dist/artFinal /usr/share/nginx/html
+COPY ./dist/ /usr/share/nginx/html
 
-COPY ./dist/artFinal/assets /usr/share/nginx/html/assets
+COPY ./dist/assets /usr/share/nginx/html/assets
 
 EXPOSE 80
