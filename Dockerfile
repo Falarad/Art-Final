@@ -2,7 +2,7 @@ FROM node:12.14 as build
 
 #WORKDIR /usr/local/app/Art-Final
 
-COPY ./ /usr/local/app/
+COPY . /usr/local/app/
 
 RUN npm install
 
