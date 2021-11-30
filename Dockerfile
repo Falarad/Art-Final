@@ -10,14 +10,10 @@ RUN npm run build
 
 
 
-FROM nginx:alpine
+FROM nginx:latest
 
-WORKDIR /usr/share/nginx/html
+COPY --from=build /usr/local/app/dist/artFinal/ /usr/share/nginx/html
 
-RUN rm -rf ./*
-
-COPY --from=build /app/dist/artFinal .
-
-ENTRYPOINT ["nginx", "-g", "daemon off;"]
+#COPY --from=build /usr/local/app/dist/artFinal/assets/ /usr/share/nginx/html/assets
 
 EXPOSE 80
