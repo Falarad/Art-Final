@@ -6,7 +6,7 @@ COPY ./ /usr/local/app/
 
 RUN npm install
 
-RUN ng build
+RUN npm build
 
 
 FROM nginx:latest
