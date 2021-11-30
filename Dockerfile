@@ -10,10 +10,14 @@ RUN npm run build
 
 
 
-FROM nginx:latest
+FROM nginx:alpine
 
-COPY --from=build /usr/local/app/dist/artFinal/ /usr/share/nginx/html
+WORKDIR /usr/share/nginx/html
 
-COPY --from=build /usr/local/app/dist/artFinal/assets/ /usr/share/nginx/html/assets
+RUN rm -rf ./*
+
+COPY --from=builder /app/dist/angular-nginx-docker .
+
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
 
 EXPOSE 80
