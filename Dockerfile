@@ -2,13 +2,13 @@ FROM node:12.14 as build
 
 WORKDIR /usr/local/app
 
-COPY ./Art-Final /usr/local/app/
+COPY ./ /usr/local/app/
 
 RUN npm install
 
 RUN npm run build
 
-COPY /usr/local/app/Art-Final/src/artFinal/assets /usr/local/app/artFinal/assets
+COPY ./src/artFinal/assets /usr/local/app/artFinal/assets
 
 FROM nginx:latest
 
