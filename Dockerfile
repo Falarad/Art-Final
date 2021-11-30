@@ -6,13 +6,9 @@ COPY ./ /usr/local/app/
 
 RUN npm install
 
-RUN npm run build
-
-
-
 FROM nginx:latest
 
-ADD /usr/local/app/Art-Final/dist/artFinal /usr/share/nginx/html
+COPY /usr/local/app/Art-Final/dist/artFinal /usr/share/nginx/html
 
 VOLUME /usr/local/app/dist/artFinal/assets /usr/share/nginx/html/assets
 
