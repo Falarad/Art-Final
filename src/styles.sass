@@ -2,9 +2,8 @@
 @import '~bootstrap/scss/bootstrap'
 
 /* You can add global styles to this file, and also import other style files */
-
-$primary: #006747
-$background: #fff
+$primary: #79a8ec
+$background: #111
 $font-face: Helvetica, sans-serif
 @mixin head()
   text-align: center
@@ -23,12 +22,47 @@ body
   font-family: $font-face
   border-left: 1px solid black
   border-right: 1px solid black
+  color: #eee
 
-.col
-  video
-    width: 100%
-  img
-    width: 100%
+.container
+  min-width: 100%
+video
+  width: 100%
+img
+  width: 100%
+  margin-bottom: 2%
 
 h1, h2, h3
   @include head
+
+p
+  text-align: center
+  font-size: 58px
+.title1
+  color: red
+.title2
+  color: white
+.title3
+  color: blue
+
+#yes
+    color: #ec3a36
+
+h1
+  font-size: 58pt
+h2
+  font-size: 28pt
+h3
+  font-size: 58pt
+.col>h2
+  font-size: 58pt
+
+li
+  font-weight: bold
+  font-size: 32pt
+
+.seperator
+  margin-bottom: 5%
+
+#slogan
+  color: #eee
